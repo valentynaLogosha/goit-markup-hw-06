@@ -681,6 +681,7 @@ footer {
   cursor: pointer;
   transition: background-color 250ms var(--transition-func),
     border-color 250ms var(--transition-func);
+  margin-bottom: 24px;
 }
 
 .modal-close svg {
@@ -699,4 +700,18 @@ footer {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+.modal-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+.modal-input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  width: 360px;
 }
