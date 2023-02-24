@@ -756,3 +756,28 @@ footer {
   padding: 16px;
   resize: none;
 }
+.check-text {
+  font-size: 12px;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+  color: #757575;
+  display: flex;
+}
+.check-link {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #4d5ae5;
+}
+.check-text::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid #2e2f42;
+  border-radius: 2px;
+  margin-right: 8px;
+}
+.input-check:checked + .check-text::before {
+  background: #404bbf;
+  border: none;
+}
