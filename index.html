@@ -478,12 +478,19 @@
             <use href="./images/icons.svg#icon-Vector-1"></use>
           </svg>
         </button>
-        <p class="modal-title">Leave your contacts and we will call you back</p>
         <form class="modal-form">
+          <p class="modal-title">
+            Leave your contacts and we will call you back
+          </p>
           <div class="modal-filed">
-            <label class="input-text">Name </label>
+            <label class="input-text" for="contacts-form-name">Name </label>
             <div class="input-wrap">
-              <input class="modal-input" name="Name" type="text" />
+              <input
+                class="modal-input"
+                name="Name"
+                type="text"
+                id="contacts-form-name"
+              />
               <svg class="modal-icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-icon-name"></use>
               </svg>
@@ -491,18 +498,28 @@
           </div>
 
           <div class="modal-filed">
-            <label class="input-text">Phone </label>
+            <label class="input-text" for="contacts-form-phone">Phone </label>
             <div class="input-wrap">
-              <input class="modal-input" type="text" name="Phone" />
+              <input
+                class="modal-input"
+                id="contacts-form-phone"
+                type="text"
+                name="Phone"
+              />
               <svg class="modal-icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </div>
           </div>
           <div class="modal-filed">
-            <label class="input-text">Email </label>
+            <label class="input-text" for="contacts-form-email">Email </label>
             <div class="input-wrap">
-              <input type="text" class="modal-input" name="Email" />
+              <input
+                type="text"
+                id="contacts-form-email"
+                class="modal-input"
+                name="Email"
+              />
               <svg class="modal-icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-email-icon"></use>
               </svg>
@@ -510,7 +527,9 @@
           </div>
 
           <div class="modal-filed">
-            <label class="input-text" for="user-text">Comment</label>
+            <label class="input-text" for="contacts-form-user-text"
+              >Comment</label
+            >
             <textarea
               class="modal-message"
               id="user-text"
@@ -526,9 +545,9 @@
               class="input-check is-hidden"
             />
             <label for="policy" class="check-text"
-              >I accept the terms and conditions of the
-              <a class="check-link" href="Privacy Policy"></a
-            ></label>
+              >I accept the terms and conditions of the &nbsp
+              <a class="check-link" href="/"> Privacy Policy</a></label
+            >
           </div>
           <div class="contacts-form-button-field">
             <button class="contacts-form-send-btn" type="submit">Send</button>

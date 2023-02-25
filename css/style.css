@@ -14,6 +14,8 @@
   --modal-color: #fcfcfc;
   --transition-func: cubic-bezier(0.4, 0, 0.2, 1);
   --subscr-placeholder-color: rgba(255, 255, 255, 0.6);
+  --modal-message-placeholder: rgba(117, 117, 117, 0.5) rgba(117, 117, 117, 0.5);
+  --check-text: #757575;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -772,15 +774,15 @@ footer {
   border-radius: 4px;
   width: 100%;
   height: 40px;
-  padding-left: 30px;
+  padding: 11px 16px 11px 37px;
 }
 
 .input-text {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  color: #8e8f99;
-  margin-top: 8px;
+  color: var(--icon-color);
+  margin-top: 4px;
   display: inline-block;
 }
 .modal-icon {
@@ -793,7 +795,7 @@ footer {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  color: rgba(117, 117, 117, 0.5);
+  color: var(--modal-message-placeholder);
 }
 .modal-message {
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -803,43 +805,49 @@ footer {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  color: rgba(117, 117, 117, 0.5);
+  color: var(--modal-message-placeholder);
   padding: 16px;
   resize: none;
 }
 .check-text {
   font-size: 12px;
-  line-height: 1.7;
   letter-spacing: 0.04em;
-  color: #757575;
+  color: var(--check-text);
+  line-height: 1.33;
   display: flex;
 }
 .check-link {
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.04em;
-  color: #4d5ae5;
+  color: var(--logo-web-color);
+  text-decoration-line: underline;
 }
 .check-text::before {
   content: "";
   width: 16px;
   height: 16px;
-  border: 1.25px solid #2e2f42;
+  border: 1.25px solid var(--main-text-color);
   border-radius: 2px;
   margin-right: 8px;
 }
 .input-check:checked + .check-text::before {
-  background: #404bbf;
+  background: var(--header-focus-hover-color);
   border: none;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' fill='none'%3E%3Cpath fill='%23F4F4FD' d='M8.446.255A.917.917 0 0 1 10 .901a.928.928 0 0 1-.242.649L4.864 7.704a.92.92 0 0 1-1.019.229.92.92 0 0 1-.306-.204L.293 4.466a.925.925 0 0 1-.226-1.024.925.925 0 0 1 .87-.578.916.916 0 0 1 .656.294L4.162 5.74 8.422.282a.329.329 0 0 1 .025-.027h-.001Z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
 }
 .input-check:focus + .check-text::before {
-  background-color: #404bbf;
+  background-color: var(--header-focus-hover-color);
+}
+.input-check:hover + .check-text::before {
+  background-color: var(--header-focus-hover-color);
 }
 .contacts-form-button-field {
   text-align: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .contacts-form-send-btn {
   min-width: 169px;
@@ -861,4 +869,21 @@ footer {
 .contacts-form-send-btn:active {
   color: var(--main-color);
   background: var(--header-focus-hover-color);
+}
+.modal-filed {
+  padding-bottom: 8px;
+}
+.input-wrap:hover,
+.input-wrap:focus,
+.input-wrap:active {
+  fill: var(--logo-web-color);
+  transition: border-color 250ms var(--transition-func);
+}
+.input-text {
+  fill: transparent;
+  transition: border-color 250ms var(--transition-func);
+}
+.modal-input {
+  fill: var(--logo-web-color);
+  transition: border-color 250ms var(--transition-func);
 }
