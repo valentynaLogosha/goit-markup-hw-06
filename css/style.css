@@ -481,6 +481,10 @@ footer {
 .footer-social-networks-item {
   margin-right: 16px;
 }
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
 
 .footer-social-networks-item a {
   display: flex;
@@ -810,7 +814,6 @@ footer {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  color: var(--modal-message-placeholder);
   padding: 16px;
   resize: none;
 }
@@ -879,6 +882,7 @@ footer {
 .modal-filed {
   margin-bottom: 8px;
 }
+
 .modal-filed svg {
   display: block;
   position: absolute;
@@ -933,4 +937,8 @@ footer {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color 250ms var(--transition-func);
+}
+.check-text {
+  margin-top: 18px;
+  margin-bottom: 24px;
 }
