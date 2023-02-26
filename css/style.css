@@ -536,6 +536,7 @@ footer {
   background-color: var(--first-part-logo-color);
   border: 0;
   border-radius: 4px;
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -544,10 +545,13 @@ footer {
   transition: background-color 250ms var(--transition-func);
 }
 
-.subscribe-btn:hover .subscribe-btn-btn:focus,
-.subscribe-btn-btn:active {
+.subscribe-btn:hover {
   background-color: var(--header-focus-hover-color);
 }
+.subscribe-btn:focus {
+  background-color: var(--header-focus-hover-color);
+}
+
 .subscribe-btn:after {
   content: "";
   display: inline-block;
@@ -555,9 +559,8 @@ footer {
   height: 24px;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 2L0 13.25L7.66994 15.6172L19.5 6.375L10.5017 16.4913L10.509 16.4936L10.5 16.4913V22L14.8013 17.8183L20.2501 19.5L24 2Z' fill='white'/%3E%3C/svg%3E");
 }
-
-.footer-element-subscribe {
-  padding-left: 80px;
+.footer-element:nth-child(2) {
+  margin-right: auto;
 }
 
 /* Portfolio */
@@ -764,7 +767,7 @@ footer {
   text-align: center;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 .input-wrap {
   position: relative;
@@ -774,7 +777,6 @@ footer {
   border-radius: 4px;
   width: 100%;
   height: 40px;
-  padding: 11px 16px 11px 37px;
 }
 
 .input-text {
@@ -782,7 +784,7 @@ footer {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--icon-color);
-  margin-top: 4px;
+  margin-bottom: 4px;
   display: inline-block;
 }
 .modal-icon {
@@ -848,8 +850,6 @@ footer {
 
 .contacts-form-button-field {
   text-align: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 .contacts-form-send-btn {
   min-width: 169px;
@@ -864,16 +864,16 @@ footer {
   height: 56px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: none;
   transition: background-color 250ms var(--transition-func);
 }
 .contacts-form-send-btn:hover,
 .contacts-form-send-btn:focus,
 .contacts-form-send-btn:active {
-  color: var(--main-color);
   background: var(--header-focus-hover-color);
 }
 .modal-filed {
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 .modal-filed svg {
   display: block;
@@ -904,14 +904,29 @@ footer {
   outline: none;
   border-color: var(--logo-web-color);
 }
-.modal-form:not(.input-check):hover + svg,
-.modal-form:not(.input-check):focus + svg {
+.modal-form input:not(.input-check):hover + svg,
+.modal-form input:not(.input-check):focus + svg {
   fill: var(--logo-web-color);
 }
 .contacts-form .input-wrapper {
   position: relative;
 }
-.modal-icon:hover,
-.modal-icon:focus {
-  border-color: var(--logo-web-color);
+.modal-field svg {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translate(0, -50%);
+  fill: var(--main-text-color);
+  transition: fill 250ms var(--transition-func);
+  pointer-events: none;
+}
+.contacts-form input:not([type="checkbox"]),
+.contacts-form textarea {
+  width: 100%;
+  padding: 11px 16px 11px 37px;
+  color: var(--main-text-color);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color 250ms var(--transition-func);
 }
