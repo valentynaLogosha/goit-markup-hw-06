@@ -776,9 +776,6 @@ footer {
   height: 40px;
   padding: 11px 16px 11px 37px;
 }
-.modal-input:focus {
-  background-color: var(--header-focus-hover-color);
-}
 
 .input-text {
   font-size: 12px;
@@ -794,11 +791,13 @@ footer {
   top: 50%;
   transform: translateY(-50%);
 }
+.clients-icon {
+  fill: currentColor;
+}
 .modal-message::placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  color: var(--modal-message-placeholder);
 }
 .modal-message {
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -875,4 +874,44 @@ footer {
 }
 .modal-filed {
   padding-bottom: 8px;
+}
+.modal-filed svg {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translate(0, -50%);
+  fill: var(--main-text-color);
+  transition: fill 250ms var(--transition-func);
+  pointer-events: none;
+}
+.input-text svg {
+  margin-right: 8px;
+  border: 1.25px solid var(--main-text-color);
+  border-radius: 2px;
+  fill: transparent;
+  transition: border-color 250ms var(--transition-func);
+}
+.modal-input:checked + svg {
+  border-color: var(--header-focus-hover-color);
+  fill: var(--header-focus-hover-color);
+}
+
+.modal-form input:hover,
+.modal-form input:focus,
+.modal-form textarea:hover,
+.modal-form textarea:focus {
+  outline: none;
+  border-color: var(--logo-web-color);
+}
+.modal-form:not(.input-check):hover + svg,
+.modal-form:not(.input-check):focus + svg {
+  fill: var(--logo-web-color);
+}
+.contacts-form .input-wrapper {
+  position: relative;
+}
+.modal-icon:hover,
+.modal-icon:focus {
+  border-color: var(--logo-web-color);
 }
