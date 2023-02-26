@@ -776,6 +776,9 @@ footer {
   height: 40px;
   padding: 11px 16px 11px 37px;
 }
+.modal-input:focus {
+  background-color: var(--header-focus-hover-color);
+}
 
 .input-text {
   font-size: 12px;
@@ -830,7 +833,9 @@ footer {
   border: 1.25px solid var(--main-text-color);
   border-radius: 2px;
   margin-right: 8px;
+  transition: 250ms var(--transition-func);
 }
+
 .input-check:checked + .check-text::before {
   background: var(--header-focus-hover-color);
   border: none;
@@ -841,9 +846,7 @@ footer {
 .input-check:focus + .check-text::before {
   background-color: var(--header-focus-hover-color);
 }
-.input-check:hover + .check-text::before {
-  background-color: var(--header-focus-hover-color);
-}
+
 .contacts-form-button-field {
   text-align: center;
   padding-top: 24px;
@@ -872,18 +875,4 @@ footer {
 }
 .modal-filed {
   padding-bottom: 8px;
-}
-.input-wrap:hover,
-.input-wrap:focus,
-.input-wrap:active {
-  fill: var(--logo-web-color);
-  transition: border-color 250ms var(--transition-func);
-}
-.input-text {
-  fill: transparent;
-  transition: border-color 250ms var(--transition-func);
-}
-.modal-input {
-  fill: var(--logo-web-color);
-  transition: border-color 250ms var(--transition-func);
 }
